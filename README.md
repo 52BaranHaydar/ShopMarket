@@ -1,0 +1,1 @@
+Uygulamayı Kotlin ile yazdım
