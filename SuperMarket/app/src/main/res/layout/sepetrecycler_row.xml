@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- item_product.xml -->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="96dp"
+    android:padding="12dp"
+    android:background="@android:color/white">
+
+    <!-- Product image with circular background -->
+    <ImageView
+        android:id="@+id/gorsel"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:padding="8dp"
+        android:background="@drawable/circle_light_green"
+        android:src="@drawable/brocoli"
+        android:contentDescription="product image"
+        android:scaleType="centerInside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <!-- Price text (yeşil) -->
+
+    <!-- Product title -->
+    <TextView
+        android:id="@+id/price_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#2E8B57"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/gorsel"
+        app:layout_constraintTop_toTopOf="@id/gorsel" />
+
+    <!-- Weight text -->
+    <TextView
+        android:id="@+id/fiyat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="1.50 lbs"
+        android:textSize="12sp"
+        android:textColor="#808080"
+        app:layout_constraintStart_toStartOf="@id/isim"
+        app:layout_constraintTop_toBottomOf="@id/isim"
+        app:layout_constraintBottom_toBottomOf="@id/gorsel"
+        app:layout_constraintEnd_toStartOf="@id/quantity_container"/>
+
+    <!-- Quantity controls -->
+    <LinearLayout
+        android:id="@+id/quantity_container"
+        android:layout_width="72dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- plus button -->
+        <ImageButton
+            android:id="@+id/topla"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:src="@drawable/arti"
+            android:contentDescription="+"
+            android:scaleType="centerInside"
+             />
+
+        <!-- quantity text -->
+        <TextView
+            android:id="@+id/bilgi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:text="1"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- minus button -->
+        <ImageButton
+            android:id="@+id/eksi"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:src="@drawable/eksi"
+            android:contentDescription="-"
+            android:scaleType="centerInside"
+             />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/sil"
+        android:layout_width="48dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="192dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toEndOf="@+id/price_info"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cop" />
+
+    <TextView
+        android:id="@+id/isim"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="Fresh Broccoli"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/quantity_container"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@id/price_info"
+        app:layout_constraintTop_toBottomOf="@id/price_info" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

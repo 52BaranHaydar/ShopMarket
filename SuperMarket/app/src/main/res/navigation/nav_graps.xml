@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graps"
+    app:startDestination="@id/girisFragment">
+
+    <fragment
+        android:id="@+id/girisFragment"
+        android:name="com.baran.supermarket.view.GirisFragment"
+        android:label="fragment_giris"
+        tools:layout="@layout/fragment_giris" >
+        <action
+            android:id="@+id/action_girisFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.baran.supermarket.view.WelcomeFragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_welcomeFragment_to_hesapFragment"
+            app:destination="@id/hesapFragment" />
+        <action
+            android:id="@+id/action_welcomeFragment_to_anaFragment"
+            app:destination="@id/anaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.baran.supermarket.view.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_anaFragment"
+            app:destination="@id/anaFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_unutmaFragment"
+            app:destination="@id/unutmaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/hesapFragment"
+        android:name="com.baran.supermarket.view.HesapFragment"
+        android:label="fragment_hesap"
+        tools:layout="@layout/fragment_hesap" >
+        <action
+            android:id="@+id/action_hesapFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/anaFragment"
+        android:name="com.baran.supermarket.view.AnaFragment"
+        android:label="fragment_ana"
+        tools:layout="@layout/fragment_ana" >
+        <action
+            android:id="@+id/action_anaFragment_to_alisverisFragment"
+            app:destination="@id/alisverisFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/alisverisFragment"
+        android:name="com.baran.supermarket.view.AlisverisFragment"
+        android:label="fragment_alisveris"
+        tools:layout="@layout/fragment_alisveris" >
+        <action
+            android:id="@+id/action_alisverisFragment_to_anaFragment"
+            app:destination="@id/anaFragment" />
+        <action
+            android:id="@+id/action_alisverisFragment_to_odemeFragment"
+            app:destination="@id/odemeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/unutmaFragment"
+        android:name="com.baran.supermarket.view.UnutmaFragment"
+        android:label="fragment_unutma"
+        tools:layout="@layout/fragment_unutma" >
+        <action
+            android:id="@+id/action_unutmaFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/odemeFragment"
+        android:name="com.baran.supermarket.view.OdemeFragment"
+        android:label="fragment_odeme"
+        tools:layout="@layout/fragment_odeme" >
+        <action
+            android:id="@+id/action_odemeFragment_to_alisverisFragment"
+            app:destination="@id/alisverisFragment" />
+        <action
+            android:id="@+id/action_odemeFragment_to_tamamlamaFragment"
+            app:destination="@id/tamamlamaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tamamlamaFragment"
+        android:name="com.baran.supermarket.view.TamamlamaFragment"
+        android:label="fragment_tamamlama"
+        tools:layout="@layout/fragment_tamamlama" >
+        <action
+            android:id="@+id/action_tamamlamaFragment_to_alisverisFragment"
+            app:destination="@id/alisverisFragment" />
+    </fragment>
+</navigation>
